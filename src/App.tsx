@@ -11,6 +11,7 @@ const App = () => {
   const [city, setCity] = useState('London');
 
   const apiKey = import.meta.env.VITE_OPENWEATHERMAP_API_KEY;
+  console.log("API Key read:", apiKey); // Debugging line
 
   const handleSearch = (e: React.KeyboardEvent<HTMLInputElement>) => {
     if (e.key === 'Enter') {
