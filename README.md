@@ -1,70 +1,65 @@
-# React + TypeScript + Vite
+# ☀️ Mi Portfolio y App del Clima
+    2
+    3 ¡Bienvenido a mi aplicación personal! Este proyecto combina una pequeña sección de portfolio
+      con una aplicación interactiva del clima, todo diseñado con un estilo moderno y "cute".
+    4
+    5 ## ✨ Características
+    6
+    7 *   **Información Personal:** Muestra mi nombre (Javier Rodriguez Lopez), rol, enlaces a
+      LinkedIn, correo electrónico y opciones para descargar mi CV en español e inglés.
+    8 *   **Foto de Perfil:** Una foto personal integrada en la sección de información.
+    9 *   **App del Clima:**
+   10     *   Consulta el clima actual de cualquier ciudad usando la API de OpenWeatherMap.
+   11     *   **Fondo Dinámico:** El color de fondo de la aplicación cambia sutilmente según la
+      temperatura (tonos pastel de rojo, naranja, verde y azul).
+   12     *   **Advertencia de Calor:** Muestra un mensaje de precaución si la temperatura supera los
+      40°C.
+   13 *   **Separador Animado:** Un sutil punto animado que se mueve verticalmente, separando
+      visualmente las dos secciones principales.
+   14 *   **Diseño Responsivo:** Adaptado para verse bien tanto en dispositivos móviles como en
+      pantallas de escritorio.
+   15 *   **Estilo "Pastel Dream":** Una estética visual suave y agradable, con tipografía Poppins.
+   16
+   17 ## 🚀 Tecnologías Utilizadas
+   18
+   19 *   **React:** Biblioteca de JavaScript para construir interfaces de usuario.
+   20 *   **Vite:** Herramienta de construcción rápida para proyectos web.
+   21 *   **TypeScript:** JavaScript con tipado estático.
+   22 *   **Tailwind CSS:** Framework CSS para un desarrollo rápido y flexible.
+   23 *   **Axios:** Cliente HTTP para realizar peticiones a la API de OpenWeatherMap.
+   24 *   **React Icons:** Librería de iconos para integrar fácilmente iconos SVG.
+   25
+   26 ## 🛠️ Configuración y Ejecución
+   27
+   28 1.  **Clona el repositorio:**
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+      git clone https://github.com/JaviRL7/Temperatura.git
+      cd Temperatura
 
-Currently, two official plugins are available:
+   1 2.  **Instala las dependencias:**
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+      npm install
 
-## Expanding the ESLint configuration
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+   ... first 3 lines hidden ...
+      con una aplicación interactiva del clima, todo diseñado con un estilo moderno y "cute".
+    4
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+   1 3.  **Configura tu API Key de OpenWeatherMap:**
+   2     *   Crea un archivo `.env.local` en la raíz del proyecto.
+   3     *   Añade tu clave de API de OpenWeatherMap de la siguiente manera:
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+          VITE_OPENWEATHERMAP_API_KEY="TU_API_KEY_AQUI"
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+   1         (Reemplaza `TU_API_KEY_AQUI` con tu clave real).
+   2 4.  **Coloca tus archivos personales:**
+   3     *   Asegúrate de que tu foto de perfil (`foto1.jpeg`) y tus CVs (`cv_javier_es.pdf`,
+     `cv_javier_en.pdf`) estén en la carpeta `public/`.
+   4 5.  **Inicia la aplicación:**
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+      npm run dev
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
-# Temperatura
+
+   1
+   2 ¡La aplicación se abrirá en tu navegador (normalmente en `http://localhost:5173`)!
