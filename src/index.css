@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  /* Tailwind handles background color */
+  position: relative;
+  overflow: hidden; /* Hide overflow from animation */
+  min-height: 100vh; /* Ensure body takes full viewport height */
+}
+
+body::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200%; /* Double width for animation */
+  height: 100%;
+  background: repeating-linear-gradient(
+    -45deg,
+    rgba(255, 255, 255, 0.15) 0px, /* Increased opacity for testing */
+    rgba(255, 255, 255, 0.15) 20px,
+    transparent 20px,
+    transparent 40px
+  );
+  animation: moveBackground 30s linear infinite;
+  z-index: -1; /* Place behind content */
+}
+
+@keyframes moveBackground {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+@keyframes dotVertical {
+  0%, 100% { transform: translateY(-100px); }
+  50% { transform: translateY(100px); }
+}
+
+.animate-dot-vertical {
+  animation: dotVertical 6s ease-in-out infinite;
+}
